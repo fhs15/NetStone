@@ -139,8 +139,8 @@ namespace NetStone.Test
         {
             var chara = await this.lodestone.GetCharacter(TestCharacterIdFull);
 
-            //Assert.AreEqual(chara.ToString(), "Arcane Disgea on Leviathan");
-            //Assert.AreEqual(chara.Server, "Leviathan");
+            Assert.AreEqual(chara.ToString(), "Arcane Disgea on Leviathan (Primal)");
+            Assert.AreEqual(chara.Server, "Leviathan (Primal)");
             Assert.AreEqual(chara.Name, "Arcane Disgea");
             Assert.AreEqual(chara.Bio, "This is a test of the emergency alert system.AHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH");
             Assert.AreEqual(chara.GuardianDeityName, "Menphina, the Lover");
@@ -153,7 +153,7 @@ namespace NetStone.Test
             Console.WriteLine(chara.GuardianDeityIcon);
 
             Assert.AreEqual(chara.FreeCompany.Id, "9232379236109629819");
-            Assert.AreEqual(chara.FreeCompany.Name, "Hell Hath No Fury");
+            Assert.AreEqual(chara.FreeCompany.Name, "Hell On Aura");
             Assert.AreEqual(chara.FreeCompany.Link.AbsoluteUri, "https://eu.finalfantasyxiv.com/lodestone/freecompany/9232379236109629819/");
             //todo: iconlayer
 
@@ -164,13 +164,13 @@ namespace NetStone.Test
 
             //Assert.AreEqual(chara.Gear.Mainhand.ItemName, "Skullrender");
 
-            //Assert.AreEqual(chara.Attributes.SkillSpeed, 3990);
+            Assert.AreEqual(chara.Attributes.SkillSpeed, 380);
 
             var classjob = await chara.GetClassJobInfo();
 
             //todo: all classjob
             Assert.AreEqual(classjob.Warrior.Level, 80);
-            Assert.AreEqual(classjob.Warrior.ExpToGo, 0);
+            Assert.AreEqual(classjob.Warrior.ExpToGo, 5992000);
             Assert.AreEqual(classjob.Warrior.IsJobUnlocked, true);
 
             Assert.AreEqual(classjob.Weaver.IsSpecialized, true);
