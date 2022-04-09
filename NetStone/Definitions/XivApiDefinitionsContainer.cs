@@ -27,6 +27,8 @@ namespace NetStone.Definitions
             this.Meta = await GetDefinition<MetaDefinition>("meta.json");
 
             this.Character = await GetDefinition<CharacterDefinition>("profile/character.json");
+            //For some reason Last of type doesnt work for .net
+            this.Character.Server.Selector = "p.frame__chara__world:last-child";
             this.ClassJob = await GetDefinition<CharacterClassJobDefinition>("profile/classjob.json");
             this.Gear = await GetDefinition<CharacterGearDefinition>("profile/gearset.json");
             this.Attributes = await GetDefinition<CharacterAttributesDefinition>("profile/attributes.json");
