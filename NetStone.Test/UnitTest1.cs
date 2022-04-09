@@ -139,8 +139,8 @@ namespace NetStone.Test
         {
             var chara = await this.lodestone.GetCharacter(TestCharacterIdFull);
 
-            Assert.AreEqual(chara.ToString(), "Arcane Disgea on Leviathan (Primal)");
-            Assert.AreEqual(chara.Server, "Leviathan (Primal)");
+            Assert.AreEqual(chara.ToString(), "Arcane Disgea on Leviathan (Primal)");
+            Assert.AreEqual(chara.Server, "Leviathan (Primal)");
             Assert.AreEqual(chara.Name, "Arcane Disgea");
             Assert.AreEqual(chara.Bio, "This is a test of the emergency alert system.AHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH");
             Assert.AreEqual(chara.GuardianDeityName, "Menphina, the Lover");
