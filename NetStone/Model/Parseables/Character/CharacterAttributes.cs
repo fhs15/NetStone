@@ -74,7 +74,7 @@ namespace NetStone.Model.Parseables.Character
         /// <summary>
         /// This characters' Skill Speed value.
         /// </summary>
-        public int SkillSpeed => int.Parse(Parse(this.definition.AttackPower));
+        public int SkillSpeed => int.Parse(Parse(this.definition.SkillSpeed));
         
         /// <summary>
         /// This characters' Attack Magic Potency value.
