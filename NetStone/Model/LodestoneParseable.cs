@@ -55,6 +55,7 @@ namespace NetStone.Model
         /// Parse the InnerText via selector.
         /// </summary>
         /// <param name="pack">Definition of the node.</param>
+        /// <param name="index">Index of res to use</param>
         /// <returns>InnerText of the node.</returns>
         protected string Parse(DefinitionsPack pack, int index = 1)
         {
