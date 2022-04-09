@@ -113,6 +113,7 @@ namespace NetStone.Model.Parseables.Character
         /// <summary>
         /// The server/world of the character.
         /// </summary>
+        //todo: Split this into server and dc
         public string Server => Parse(this.charDefinition.Server);
 
         /// <summary>
