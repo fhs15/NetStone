@@ -139,8 +139,8 @@ namespace NetStone.Test
         {
             var chara = await this.lodestone.GetCharacter(TestCharacterIdFull);
 
-            Assert.AreEqual(chara.ToString(), "Arcane Disgea on Leviathan (Primal)");
-            Assert.AreEqual(chara.Server, "Leviathan (Primal)");
+            Assert.AreEqual(chara.ToString(), "Arcane Disgea on Leviathan");
+            Assert.AreEqual(chara.Server, "Leviathan");
             Assert.AreEqual(chara.Name, "Arcane Disgea");
             Assert.AreEqual(chara.Bio, "This is a test of the emergency alert system.AHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH");
             Assert.AreEqual(chara.GuardianDeityName, "Menphina, the Lover");
@@ -162,7 +162,7 @@ namespace NetStone.Test
             Assert.AreEqual(chara.PvPTeam.Link.AbsoluteUri, "https://eu.finalfantasyxiv.com/lodestone/pvpteam/59665d98bf81ff58db63305b538cd69a6c64d578/");
             //todo: iconlayer
 
-            //Assert.AreEqual(chara.Gear.Mainhand.ItemName, "Skullrender");
+            Assert.AreEqual(chara.Gear.Mainhand.ItemName, "Talekeeper Recollection");
 
             Assert.AreEqual(chara.Attributes.SkillSpeed, 380);
 

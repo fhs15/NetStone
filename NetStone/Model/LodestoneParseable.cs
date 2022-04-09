@@ -56,7 +56,7 @@ namespace NetStone.Model
         /// </summary>
         /// <param name="pack">Definition of the node.</param>
         /// <returns>InnerText of the node.</returns>
-        protected string Parse(DefinitionsPack pack)
+        protected string Parse(DefinitionsPack pack, int index = 1)
         {
             if (!string.IsNullOrEmpty(pack.Regex))
             {
@@ -66,7 +66,7 @@ namespace NetStone.Model
                     return null;
                 
                 if (res.Count != 0)
-                    return res[0].Value;
+                    return res[index].Value;
             }
 
             return ParseInnerText(pack);
@@ -216,8 +216,8 @@ namespace NetStone.Model
 
         protected DateTime ParseTime(DefinitionsPack pack)
         {
-            var res = ParseRegex(pack);
-            return DateTimeOffset.FromUnixTimeSeconds(long.Parse(res[1].Value)).UtcDateTime;
+            var res = Parse(pack);
+            return DateTimeOffset.FromUnixTimeSeconds(long.Parse(res)).UtcDateTime;
         }
     }
 }
