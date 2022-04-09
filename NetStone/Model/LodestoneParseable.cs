@@ -66,7 +66,7 @@ namespace NetStone.Model
                     return null;
                 
                 if (res.Count != 0)
-                    return res[1].Value;
+                    return res[0].Value;
             }
 
             return ParseInnerText(pack);
@@ -216,8 +216,8 @@ namespace NetStone.Model
 
         protected DateTime ParseTime(DefinitionsPack pack)
         {
-            var res = Parse(pack);
-            return DateTimeOffset.FromUnixTimeSeconds(long.Parse(res)).UtcDateTime;
+            var res = ParseRegex(pack);
+            return DateTimeOffset.FromUnixTimeSeconds(long.Parse(res[1].Value)).UtcDateTime;
         }
     }
 }
