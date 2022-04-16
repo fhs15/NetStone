@@ -165,6 +165,7 @@ namespace NetStone.Test
             Assert.AreEqual(chara.Gear.Mainhand.ItemName, "Talekeeper Recollection");
 
             Assert.AreEqual(chara.Attributes.SkillSpeed, 380);
+            
 
             var classjob = await chara.GetClassJobInfo();
 

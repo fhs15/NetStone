@@ -39,7 +39,7 @@ namespace NetStone.Model.Parseables.Character.ClassJob
             }
         }
 
-        private string ExpString => Parse(this.definition.Exp, 0);
+        private string ExpString => Parse(this.definition.Exp);
 
         private long? expCurrentVal;
         
