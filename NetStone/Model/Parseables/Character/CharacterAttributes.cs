@@ -16,6 +16,7 @@ namespace NetStone.Model.Parseables.Character
             this.definition = definition;
         }
 
+        //todo: Attributes will thow exception if active job is DOH or DOL
         /// <summary>
         /// This characters' Strength value.
         /// </summary>
